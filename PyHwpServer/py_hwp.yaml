@@ -1,0 +1,24 @@
+config:
+  system:
+    genpy: C:\Users\k\AppData\Local\Temp\gen_py
+    filepath_checker_module: FilePathCheckerModuleExample
+
+  file:
+    directory: .\etc
+    output_directory: .\etc
+
+  image:
+    default_width: 60
+    default_height: 40
+
+  server:
+    kafka:
+      host: localhost
+      port: 9092
+      str_type: utf-8
+      topic: topic
+    interval:
+      loop: 3
+    metadata_key: meta
+
+
