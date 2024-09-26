@@ -30,7 +30,7 @@ def post_payload(payload: Payload):
 
 @app.get("/run")
 async def run_consuming(data_store: typing.Annotated[Storage, Depends(datastore)]):
-    data_store.stop_command = False
+    data_store.command_resume()
     if not data_store.is_thread_working():
         thread = threading.Thread(target=run_event_loop)
         thread.start()
@@ -43,8 +43,8 @@ async def run_consuming(data_store: typing.Annotated[Storage, Depends(datastore)
 @app.get("/stop")
 async def stop_consuming(data_store: typing.Annotated[Storage, Depends(datastore)]):
     if data_store.is_thread_working():
-        data_store.stop_command = True
-        data_store.threads = []
+        data_store.command_stop()
+        data_store.emtpy_thread()
         return {"status": f"app stopped"}
     else:
         return {"status": "app is not running now"}

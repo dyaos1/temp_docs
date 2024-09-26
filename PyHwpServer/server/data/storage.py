@@ -45,6 +45,9 @@ class Storage(metaclass=SingletonMeta):
     def is_occupied(self):
         return self.occupation
     
+    def emtpy_thread(self):
+        self.threads = []
+    
     def append_thread(self, thread: Thread):
         self.threads.append(thread)
 
@@ -55,4 +58,11 @@ class Storage(metaclass=SingletonMeta):
         self.refresh_thread()
         return True if len(self.threads) > 0 else False
     
+    def consumer_instance(self):
+        return self.consumer
     
+    def command_resume(self):
+        self.stop_command = False
+    
+    def command_stop(self):
+        self.stop_command = True
