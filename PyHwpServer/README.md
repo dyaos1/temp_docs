@@ -33,9 +33,36 @@
     한글 문서의 key string의 누름틀을 찾아 표 작성
 
 
+### KAFKA 설치
+1. 다운로드 받기
+    https://kafka.apache.org/quickstart
+    에 방문해서 kafka를 download한다(https://dlcdn.apache.org/kafka/3.8.0/kafka_2.13-3.8.0.tgz)
+
+2. 경로 줄이기
+
+    위 파일을 압축을 풀고 가급적 가장 짧은 경로 C:/ 라든지 하는 곳에 둔다.
+    이유는 cmd 명령어가 명령어 길이제한이 있어서 kafka를 실행시키면 경로가 길면 명령어 길이제한에 걸린다.
+
+    폴더 명도 kafka_2.13-3.8.0 이런 식으로 되어 있고 
+    압축풀기에 따라서 폴더 안에 또 폴더 kafka_2.13-3.8.0\kafka_2.13-3.8.0 이런식으로 생성되기도 하는데, 역시 경로 길이를 늘리는 주범이므로
+    그냥 kafka만 남기고 이름도 변경하고 파일도 밖으로 빼자.
+
+3. root 폴더에 kafka-starter.bat를 이동시키기
+    root폴더란 kafka폴더에서 bin폴더, LICENSE, NOTICE가 보이는 폴더를 의미한다. 여기다 kafka-starter.bat를 옮기고 실행시켜 본다.
+
+    만일 여전히 경로가 너무 길다고 나오면 경로를 더 줄여보고 안되면, 알아서 검색해서 적절한 수단을 쓴다.
+
+    .bat 파일이 방화벽에 걸리든가 해서 반입이 안된다면, 다음 명령어를 입력하여 수동으로 실행시키자.
+    ```bin\windows\zookeeper-server-start.bat config\zookeeper.properties```
+    실행 시키고 나서
+    ```bin\windows\kafka-server-start.bat config\server.properties```
+
+
+
+
 ### 실행 방법
 
-1. starter.bat을 실행시킨다. 
+1. kafka-starter.bat을 실행시킨다. 
 두가지 서버를 10초 간격으로 실행시키게 되어 있음. pc가 느려서 잘 안되는것 같다면 10초를 20초나 30초로 늘려볼것
 
 2. uvicorn app:app --host `원하는 ip` --port `원하는 포트` 로 서버를 실행시킨다.
@@ -91,3 +118,4 @@
     ```cmd
     curl -X GET http://localhost:8000/stop
     ```
+
