@@ -3,12 +3,14 @@
 ### 1.PRACTICE: openai 연습해보기
 
 - 환경 구성
+
 openai 설치
 ```
 pip install openai
 ```
 
-- [optional] OpenApiKey 설정하기
+- OpenApiKey 설정하기
+
 가장 기본적인 방법은 zshell이나 bash 등 터미널의 기본 환경변수로 OPENAI_API_KEY를 설정하는 방법임.
 
 ```zsh
@@ -44,8 +46,7 @@ completion = client.chat.completions.create(
             "role": "user",
             "content": "이순신이 참여한 해전 중에 가장 유명한 것은 뭐야? 짧게 대답해줘."
         }
-    ],
-    apikey
+    ]
 )
 
 print(completion.choices[0].message)

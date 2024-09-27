@@ -12,7 +12,7 @@
 
  - Prompt Engineering: AI에게 맥락을 이해시키고 원하는 작업을 수행하도록 지시하도록 설계하는 프로세스
 
- - Retriev Augmented Generation(RAG): AI에게 특정 데이터만을 다루도록 하게하는 처리기술. AI기반 chatbot의 핵심기술
+ - Retrieval Augmented Generation(RAG): AI에게 특정 데이터만을 다루도록 하게하는 처리기술. AI기반 chatbot의 핵심기술
 
  - History Awareness: AI가 답변을 할때 이전에 했던 대화 내용을 기억하여 답변하도록 하는 기술
 
