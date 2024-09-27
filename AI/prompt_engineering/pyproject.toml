@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "prompt-engineering"
+version = "0.1.0"
+description = ""
+authors = ["Flzomb <spark3840@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "^1.48.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
