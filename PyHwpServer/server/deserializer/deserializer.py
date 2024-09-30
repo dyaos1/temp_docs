@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from config import load_config
 from typing import Any
 
-META_KEY = load_config().server.metadata_key
+META_KEY = load_config().server.metadata.key
 
 
 class HwpModel(BaseModel):

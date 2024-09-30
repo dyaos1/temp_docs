@@ -19,6 +19,8 @@ config:
       topic: topic
     interval:
       loop: 3
-    metadata_key: meta
+    metadata:
+      key: meta
+      template: './etc/여름 휴가 안내문.hwp'
 
 

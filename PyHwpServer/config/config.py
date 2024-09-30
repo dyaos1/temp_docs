@@ -21,10 +21,14 @@ class KafkaPydanticModel(BaseModel):
 class IntervalPydanticModel(BaseModel):
     loop: int
 
+class MetadataPydanticModel(BaseModel):
+    key: str
+    template: str
+
 class ServerPydanticModel(BaseModel):
     kafka: KafkaPydanticModel
     interval: IntervalPydanticModel
-    metadata_key: str
+    metadata: MetadataPydanticModel
 
 class ConfigPydanticModel(BaseModel):
     system: SystemPydanticModel

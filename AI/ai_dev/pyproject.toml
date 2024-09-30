@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "with-langchain"
+name = "ai-dev"
 version = "0.1.0"
 description = ""
 authors = ["Flzomb <spark3840@gmail.com>"]

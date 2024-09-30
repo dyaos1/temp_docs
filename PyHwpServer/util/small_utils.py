@@ -12,3 +12,9 @@ def none_check(value, default):
     if value is None:
         return default
     return value
+
+def add_hwp_to_filename(filename: str):
+    if filename.endswith(".hwp") or filename.endswith(".HWP"):
+        return filename
+    else:
+        return filename+".hwp"
